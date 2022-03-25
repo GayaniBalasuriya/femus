@@ -277,7 +277,7 @@ int main(int argc, char** args) {
     // ======= Mesh  ==================
    std::vector<std::string> mesh_files;
    
-   mesh_files.push_back("Mesh_1_x_dir_neu.med");
+   mesh_files.push_back("assignmentDiskQuad.med");
 //    mesh_files.push_back("Mesh_2_xy_boundaries_groups_4x4.med");
 //    mesh_files.push_back("Mesh_1_x_all_dir.med");
 //    mesh_files.push_back("Mesh_1_y_all_dir.med");
@@ -573,7 +573,7 @@ void AssembleProblemDirNeu(MultiLevelProblem& ml_prob) {
 //--------------    
               
 //--------------    
-	      double laplace_beltrami_res_du_u_i = 0.;
+	      double laplace_beltrami_res_du_u_i = 0.\Delta u_exact;
           if ( i < nDof_u ) {    
           for (unsigned kdim = 0; kdim < dim; kdim++) {
             for (unsigned ldim = 0; ldim < dim; ldim++) {
